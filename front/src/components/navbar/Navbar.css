@@ -1,0 +1,21 @@
+.nav-style {
+	align-items: flex-end;
+	border: 2px solid red;
+	}
+
+.nav-style li {
+	align-content: flex-end;
+	color: red;
+}
+
+.nav-style a {
+	align-content: flex-end;
+	color: red;
+}
+
+
+
+
+/* .nav-style .header img {
+	margin-right: 20px;
+} */
