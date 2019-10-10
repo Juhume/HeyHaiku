@@ -1,16 +1,15 @@
-// auth/auth-service.js
 import axios from 'axios';
 
-class AuthService {
+class HaikuService {
   constructor() {
     this.service = axios.create({
-      baseURL: 'http://localhost:3010/api/auth',
+      baseURL: 'http://localhost:3010/haikus',
       withCredentials: true
     });
   }
 
-  signup = (username, password, email) => {
-    return this.service.post('/signup', {username, password, email})
+  add = (name, line1, line2, line3) => {
+    return this.service.post('/add', {name, line1, line2, line3})
     .then(response => response.data)
   }
 
@@ -30,4 +29,4 @@ class AuthService {
   }
 }
 
-export default AuthService;
+export default HaikuService;

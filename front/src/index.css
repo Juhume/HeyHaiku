@@ -17,6 +17,8 @@ code {
   display: flex;
   list-style: none;
   justify-content: center;
+  background-color: #9bbede;
+
 }
 
 .nav-style li {

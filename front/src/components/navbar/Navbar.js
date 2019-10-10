@@ -1,9 +1,7 @@
-// navbar/Navbar.js
 
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import AuthService from "../auth/AuthService";
-import logo from "../../logo-ironhack-blue.png";
 import "./Navbar.css"
 
 class Navbar extends Component {
@@ -32,8 +30,8 @@ class Navbar extends Component {
               <li>
               <a onClick={this.handleLogout}>Logout</a>
               </li>
-            
           </ul>
+          <Link to="/createhaiku">Create Haiku</Link>
 
           <div className="header">
             {/* <img src={logo} alt="" height="100"/> */}

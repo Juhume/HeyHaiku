@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+// import CreateHaiku from "./components/contents/CreateHaiku/CreateHaiku";
+// import EditHaiku from "./components/contents/EditHaiku/EditHaiku";
 import "./UserHome.css";
 
 //clase componente que renderiza los contenidos genéricos

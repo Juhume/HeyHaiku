@@ -1,6 +1,9 @@
-/* .App {
+.App {
   text-align: center;
-} */
+  background-color: #9bbede;
+}
+
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -10,6 +13,7 @@
 .hometext{
   font-size: 30px;
  text-align: center;
+
 }
 
 .login {

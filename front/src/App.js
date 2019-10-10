@@ -8,7 +8,8 @@ import Navbar from "./components/navbar/Navbar";
 import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
 import AuthService from "./components/auth/AuthService";
-import UserHome from "./components/contents/UserHome";
+import UserHome from "./components/contents/UserHome/UserHome";
+import CreateHaiku from "./components/contents/UserHome/CreateHaiku/CreateHaiku";
 
 //App es la aplicación base, que se sirve del servicio AuthService para conectar con la bbdd
 class App extends Component {
@@ -19,12 +20,12 @@ class App extends Component {
     this.state = { loggedInUser: null };
     this.service = new AuthService();
 
-    this.fetchUser()
+    this.fetchUser();
   }
 
   getUser = userObj => {
     this.setState({
-      loggedInUser: userObj,
+      loggedInUser: userObj
     });
   };
 
@@ -40,12 +41,12 @@ class App extends Component {
       .loggedin()
       .then(response => {
         this.setState({
-          loggedInUser: response,
+          loggedInUser: response
         });
       })
       .catch(err => {
         this.setState({
-          loggedInUser: false,
+          loggedInUser: false
         });
       });
   }
@@ -60,7 +61,15 @@ class App extends Component {
 
           <div className="App">
             <header className="App-header">
-              <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
+              <Navbar
+                userInSession={this.state.loggedInUser}
+                logout={this.logout}
+              />
+              <Route
+                    exact
+                    path="/createhaiku"
+                    render={() => <CreateHaiku />}
+                  />
               {/* aqui simplemente se muestra un lorem ipsum genérico para que veáis contenidos que solo se muestran a usuarios logeados */}
               <UserHome />
             </header>
@@ -72,25 +81,39 @@ class App extends Component {
       return (
         <React.Fragment>
           <Redirect to="/login" />
-        
 
           <div className="App">
             <header className="App-header">
-              <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
-              <div className= "hometext">
-              <h1>Welcome to Hey Haiku!</h1>
+              <Navbar
+                userInSession={this.state.loggedInUser}
+                logout={this.logout}
+              />
+              <div className="hometext">
+                <h1>Welcome to Hey Haiku!</h1>
 
-              <h3>A webpage where you can create, generate and share your greatest Haikus!</h3>
+                <h3>
+                  Create, share, enjoy it,<br></br> a new world awaits for you,<br></br> Hey Haiku
+                  is here.
+                </h3>
 
-
-              <h5>Feeling the inspiration? Log in or sign up below to start creating!</h5>
-
+                <h5>
+                  Feeling the inspiration? Log in or sign up below to start
+                  creating!
+                </h5>
               </div>
-              <div className= "login">
-              <Switch>
-                <Route exact path="/signup" render={() => <Signup getUser={this.getUser} />} />
-                <Route exact path="/login" render={() => <Login getUser={this.getUser} />} />
-              </Switch>
+              <div className="login">
+                <Switch>
+                  <Route
+                    exact
+                    path="/signup"
+                    render={() => <Signup getUser={this.getUser} />}
+                  />
+                  <Route
+                    exact
+                    path="/login"
+                    render={() => <Login getUser={this.getUser} />}
+                  />
+                </Switch>
               </div>
             </header>
           </div>

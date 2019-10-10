@@ -49,6 +49,7 @@ class Login extends Component {
           <label>Username:</label>
           <input type="text" name="username" value={this.state.username} onChange={e => this.handleChange(e)} />
         </fieldset>
+        
 
         <fieldset>
           <label>Password:</label>
