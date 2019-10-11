@@ -1,21 +1,30 @@
 .nav-style {
-	align-items: flex-end;
-	border: 2px solid red;
-	}
+  display: flex;
+	justify-content: flex-end;
+	font-size: 20px;
+	background-color: rgb(66, 83, 87);
+}
 
-.nav-style li {
+/* .nav-style li {
 	align-content: flex-end;
 	color: red;
-}
+} */
 
 .nav-style a {
-	align-content: flex-end;
-	color: red;
+	color: rgb(0, 140, 255);
+	padding: 20px;
+  text-decoration: none;
+}
+
+.nav-style a:hover {
+color: red;
+transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
 }
 
 
 
-
-/* .nav-style .header img {
+/* 
+.nav-style .header img {
 	margin-right: 20px;
 } */

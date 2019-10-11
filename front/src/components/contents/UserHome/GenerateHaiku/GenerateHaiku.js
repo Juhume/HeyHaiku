@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Myprofile extends Component {
-  
+export default class GenerateHaiku extends Component {
   render() {
     return (
       <div>

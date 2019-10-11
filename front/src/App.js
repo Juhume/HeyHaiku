@@ -10,6 +10,8 @@ import Login from "./components/auth/Login";
 import AuthService from "./components/auth/AuthService";
 import UserHome from "./components/contents/UserHome/UserHome";
 import CreateHaiku from "./components/contents/UserHome/CreateHaiku/CreateHaiku";
+import Myprofile from "./components/contents/UserHome/MyProfile/Myprofile";
+import GenerateHaiku from "./components/contents/UserHome/GenerateHaiku/GenerateHaiku";
 
 //App es la aplicación base, que se sirve del servicio AuthService para conectar con la bbdd
 class App extends Component {
@@ -70,9 +72,18 @@ class App extends Component {
                     path="/createhaiku"
                     render={() => <CreateHaiku />}
                   />
-              {/* aqui simplemente se muestra un lorem ipsum genérico para que veáis contenidos que solo se muestran a usuarios logeados */}
-              <UserHome />
+              <Route
+                    exact
+                    path="/generatehaiku"
+                    render={() => <GenerateHaiku />}
+                  />
+              <Route
+                    exact
+                    path="/myprofile"
+                    render={() => <Myprofile />}
+                  />
             </header>
+            <UserHome />
           </div>
         </React.Fragment>
       );
@@ -88,6 +99,9 @@ class App extends Component {
                 userInSession={this.state.loggedInUser}
                 logout={this.logout}
               />
+                </header>
+                <div className="home">
+
               <div className="hometext">
                 <h1>Welcome to Hey Haiku!</h1>
 
@@ -115,7 +129,7 @@ class App extends Component {
                   />
                 </Switch>
               </div>
-            </header>
+              </div>
           </div>
         </React.Fragment>
       );

@@ -21,7 +21,6 @@ const login = (req, user) => {
   })
 }
 
-
 // SIGNUP
 router.post('/signup', (req, res, next) => {
 
@@ -78,7 +77,6 @@ router.get('/currentuser', (req,res,next) => {
     next(new Error('Not logged in'))
   }
 })
-
 
 router.get('/logout', (req,res) => {
   req.logout();

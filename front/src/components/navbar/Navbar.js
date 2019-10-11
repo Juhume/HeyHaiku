@@ -23,15 +23,17 @@ class Navbar extends Component {
     if (this.state.loggedInUser) {
       return (
         <nav className="nav-style">
-          <ul>
-            <li>
-              <h6>{this.state.loggedInUser.username}</h6>
-              </li>
-              <li>
-              <a onClick={this.handleLogout}>Logout</a>
-              </li>
-          </ul>
-          <Link to="/createhaiku">Create Haiku</Link>
+
+
+          <Link to="/createhaiku">Create Haiku</Link> <br></br>
+
+          <Link to="/generatehaiku">Generate Haiku</Link> <br></br>
+        
+          <Link to="/myprofile">{this.state.loggedInUser.username}</Link> <br></br>
+
+          <a onClick={this.handleLogout}>Logout</a>
+
+
 
           <div className="header">
             {/* <img src={logo} alt="" height="100"/> */}

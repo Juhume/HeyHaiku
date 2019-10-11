@@ -45,8 +45,9 @@ router.route('/update/:id').post((req, res) => {
   Haiku.findById(req.params.id)
     .then(haiku => {
       haiku.name = req.body.name;
-      haiku.text = req.body.text;
-
+      haiku.line1 = req.body.line1;
+      haiku.line2 = req.body.line2;
+      haiku.line3 = req.body.line3;
 
       haiku.save()
         .then((haiku) => res.json({haiku}))
