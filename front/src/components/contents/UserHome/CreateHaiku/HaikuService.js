@@ -13,19 +13,11 @@ class HaikuService {
     .then(response => response.data)
   }
 
-  login = (username, password) => {
-    return this.service.post('/login', {username, password})
+  getAll = () => {
+    console.log("hola")
+    return this.service.get('/all/Haikus')
     .then(response => response.data)
-  }
-
-  loggedin = () => {
-    return this.service.get('/currentUser',)
-    .then(response => response.data)
-  }
-
-  logout = () => {
-    return this.service.get('/logout',)
-    .then(response => response.data)
+    .catch(err => console.log(err))
   }
 }
 

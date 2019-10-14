@@ -28,7 +28,7 @@ const app = express();
 
 // Middleware Setup
 var whitelist = [
-  'http://localhost:3000'
+  'http://localhost:3000', 'https://heyhaiku.herokuapp.com'
 ];
 var corsOptions = {
   origin: function(origin, callback){
@@ -61,7 +61,8 @@ require('./passport')(app);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 
 
@@ -76,5 +77,7 @@ app.use('/api/auth', authRouter);
 const haikusRoutes = require('./routes/Haikus')
 app.use('/haikus', haikusRoutes)
 
+
+app.use((req, res) => {     res.sendFile(__dirname + "/public/index.html");    });
 
 module.exports = app;

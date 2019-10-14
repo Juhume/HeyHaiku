@@ -2,7 +2,18 @@ body {
   background-color: #ebebeb;
 }
 
+.home{
+  display: flex;
+}
 
-h1 {
-  text-align: center;
+
+.haikus{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  border: solid 1px tomato;
+  justify-content: space-between;
+  padding:20px;
 }

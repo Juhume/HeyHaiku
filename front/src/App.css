@@ -53,6 +53,10 @@ input:active {
 	top:1px;
 }
 
+::placeholder { 
+  color: white;
+  opacity: 0.8;
+}
 
 
 

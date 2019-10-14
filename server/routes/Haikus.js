@@ -12,8 +12,7 @@ router.post('/add', (req, res, next) => {
   const line1 = req.body.line1;
   const line2 = req.body.line2;
   const line3 = req.body.line3;
-
-  const creatorId = req.body.creatorId;
+  const creatorId = req.user._id;
 
   const newHaiku = new Haiku({
     name,
@@ -21,7 +20,6 @@ router.post('/add', (req, res, next) => {
     line2,
     line3,
     creatorId
-    // creatorId : req.user._id
   });
 
   newHaiku.save()
@@ -56,4 +54,12 @@ router.route('/update/:id').post((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
-module.exports = router;
+router.get('/all/Haikus', (req, res, next) => {
+  Haiku
+  .find()
+  .populate("creatorId")
+  .then(haikus => res.json({haikus}))
+  .catch(err => console.log(err))
+})
+  
+  module.exports = router;

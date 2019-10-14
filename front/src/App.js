@@ -59,34 +59,21 @@ class App extends Component {
       //en este caso mostramos los contenidos ya que hay usuario
       return (
         <React.Fragment>
-          <Redirect to="/home" />
-          <Route
-                    exact
-                    path="/home"
-                    render={() => <UserHome />}
-                  />
-
           <div className="App">
             <header className="App-header">
               <Navbar
                 userInSession={this.state.loggedInUser}
                 logout={this.logout}
               />
+              <Route exact path="/createhaiku" render={() => <CreateHaiku />} />
               <Route
-                    exact
-                    path="/createhaiku"
-                    render={() => <CreateHaiku />}
-                  />
-              <Route
-                    exact
-                    path="/generatehaiku"
-                    render={() => <GenerateHaiku />}
-                  />
-              <Route
-                    exact
-                    path="/myprofile"
-                    render={() => <Myprofile />}
-                  />
+                exact
+                path="/generatehaiku"
+                render={() => <GenerateHaiku />}
+              />
+              <Route exact path="/myprofile" render={() => <Myprofile />} />
+              <Redirect to="/home" />
+              <Route exact path="/home" render={() => <UserHome />} />
             </header>
             {/* <UserHome /> */}
           </div>
@@ -104,15 +91,14 @@ class App extends Component {
                 userInSession={this.state.loggedInUser}
                 logout={this.logout}
               />
-                </header>
-                <div className="home">
-
+            </header>
+            <div className="home">
               <div className="hometext">
                 <h1>Welcome to Hey Haiku!</h1>
 
                 <h3>
-                  Create, share, enjoy it,<br></br> a new world awaits for you,<br></br> Hey Haiku
-                  is here.
+                  Create, share, enjoy it,<br></br> a new world awaits for you,
+                  <br></br> Hey Haiku is here.
                 </h3>
 
                 <h5>
@@ -134,7 +120,7 @@ class App extends Component {
                   />
                 </Switch>
               </div>
-              </div>
+            </div>
           </div>
         </React.Fragment>
       );
