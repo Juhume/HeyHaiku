@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import AuthService from "../auth/AuthService";
 import "./Navbar.css"
+import logo from './haiku-seeklogo.com.svg';
 
 class Navbar extends Component {
   constructor(props) {
@@ -23,13 +24,15 @@ class Navbar extends Component {
     if (this.state.loggedInUser) {
       return (
         <nav className="nav-style">
+          <img src={logo} alt="" height="60"/>
+          <Link to="/home" style={{ textDecoration: 'none' }}>Home</Link> <br></br>
 
 
-          <Link to="/createhaiku">Create Haiku</Link> <br></br>
+          <Link to="/createhaiku" style={{ textDecoration: 'none' }}>Create Haiku</Link> <br></br>
 
-          <Link to="/generatehaiku">Generate Haiku</Link> <br></br>
+          <Link to="/generatehaiku" style={{ textDecoration: 'none' }}>Generate Haiku</Link> <br></br>
         
-          <Link to="/myprofile">{this.state.loggedInUser.username}</Link> <br></br>
+          <Link to="/myprofile" style={{ textDecoration: 'none' }}>{this.state.loggedInUser.username}</Link> <br></br>
 
           <a onClick={this.handleLogout}>Logout</a>
 
@@ -45,14 +48,16 @@ class Navbar extends Component {
       return (
         <div>
           <nav className="nav-style">
-            <ul>
-              <li>
-                <Link to="/signup">Signup</Link>
-              </li>
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-            </ul>
+
+
+              <img src={logo} alt="" height="60"/>
+
+
+                <Link to="/signup" style={{ textDecoration: 'none' }}>Signup</Link>
+
+                <Link to="/login" style={{ textDecoration: 'none' }}>Login</Link>
+
+            
           </nav>
         </div>
       );

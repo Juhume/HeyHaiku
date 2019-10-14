@@ -5,26 +5,22 @@
 	background-color: rgb(66, 83, 87);
 }
 
-/* .nav-style li {
-	align-content: flex-end;
-	color: red;
-} */
-
 .nav-style a {
-	color: rgb(0, 140, 255);
+	color: rgb(68, 135, 190);
 	padding: 20px;
   text-decoration: none;
 }
 
 .nav-style a:hover {
-color: red;
+color: rgb(36, 153, 124);
 transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-
 }
 
+.link {
+	text-decoration: none;
+}
 
-
-/* 
-.nav-style .header img {
-	margin-right: 20px;
-} */
+.nav-style img {
+	padding: 20px;
+	margin-right: auto;
+}

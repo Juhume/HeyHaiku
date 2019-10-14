@@ -49,28 +49,28 @@ class Signup extends Component {
   render() {
     return(
       <div>
-        <h3>Welcome!, create your account next:</h3>
+        {/* <h3>Welcome!, create your account next:</h3> */}
 
         <form onSubmit={this.handleFormSubmit}>
           <fieldset>
-            <label>Your Username:</label>
-            <input type="text" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/>
+            <label>Username:</label>
+            <input type="text" name="username" placeholder="Matsuo Bashō" value={this.state.username} onChange={ e => this.handleChange(e)}/>
           </fieldset>
 
           <fieldset>
-            <label>Your Email:</label>
-            <input type="email" name="email" value={this.state.email} onChange={ e => this.handleChange(e)}/>
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Matsuo@Haikulover.com" value={this.state.email} onChange={ e => this.handleChange(e)}/>
           </fieldset>
           
           <fieldset>
-            <label>Your Password:</label>
-            <input type="password" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
+            <label>Password:</label>
+            <input type="password" name="password" placeholder="******" value={this.state.password} onChange={ e => this.handleChange(e)} />
           </fieldset>
           
-          <input type="submit" value="Sign up" />
+          <input type="submit" value="Click here and take out your writer inside" />
         </form>
 
-        <h1>{this.state.error ? 'Error' : ''}</h1>
+        <h4>{this.state.error ? 'Oups! Something went wrong!' : ''}</h4>
       </div>
     )
   }

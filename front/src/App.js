@@ -60,6 +60,11 @@ class App extends Component {
       return (
         <React.Fragment>
           <Redirect to="/home" />
+          <Route
+                    exact
+                    path="/home"
+                    render={() => <UserHome />}
+                  />
 
           <div className="App">
             <header className="App-header">
@@ -83,7 +88,7 @@ class App extends Component {
                     render={() => <Myprofile />}
                   />
             </header>
-            <UserHome />
+            {/* <UserHome /> */}
           </div>
         </React.Fragment>
       );
@@ -112,7 +117,7 @@ class App extends Component {
 
                 <h5>
                   Feeling the inspiration? Log in or sign up below to start
-                  creating!
+                  creating your best haikus!
                 </h5>
               </div>
               <div className="login">

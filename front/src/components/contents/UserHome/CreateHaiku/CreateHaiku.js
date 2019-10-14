@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import HaikuService from './HaikuService'
+import "./CreateHaiku.css"
+
 
 export default class CreateHaiku extends Component {
   constructor() {
@@ -128,7 +130,7 @@ export default class CreateHaiku extends Component {
       return {result: false, syllables:result};
     }
     function arrayCompare(a1, a2){
-      return a1.length==a2.length && a1.every(function(v,i) { return v === a2[i]})
+      return a1.length===a2.length && a1.every(function(v,i) { return v === a2[i]})
     }
     
   }
@@ -136,27 +138,26 @@ export default class CreateHaiku extends Component {
   render() {
    this.checkHaiku()
     return (
-
-      <div>
+      <div className="haikuform">
         <form onSubmit= {(event) => this.handleFormSubmit(event)}>
 
         <fieldset>
-          <label>Name of your Haiku</label>
+          <label>Name of your Haiku: </label> <br></br>
           <input type="text" name="name" value={this.state.name} placeholder="Give a name to your Haiku" onChange= {(e) => this.handleChange(e)}/>
         </fieldset>
 
         <fieldset>
-          <label>Line 1</label>
-          <input type="text" name="line1" value={this.state.line1} placeholder="I am first with five"  onChange= {(e) => this.handleChange(e)}/>
+          <label>Line 1: </label>
+          <input type="text" name="line1" value={this.state.line1} placeholder="It begins with five"  onChange= {(e) => this.handleChange(e)}/>
         </fieldset>
 
         <fieldset>
-          <label>Line 2</label>
+          <label>Line 2: </label>
           <input type="text" name="line2" value={this.state.line2} placeholder="Then seven in the middle" onChange= {(e) => this.handleChange(e)}/>
         </fieldset>
 
         <fieldset>
-          <label>Line 3</label>
+          <label>Line 3: </label>
           <input type="text" name="line3"  value={this.state.line3} placeholder="Five again to end" onChange= {(e) => this.handleChange(e)}/>
         </fieldset>
 
