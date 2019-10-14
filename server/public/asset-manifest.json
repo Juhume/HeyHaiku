@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.3d48a5b6.chunk.css",
-    "main.js": "/static/js/main.711efa6f.chunk.js",
-    "main.js.map": "/static/js/main.711efa6f.chunk.js.map",
+    "main.js": "/static/js/main.6723f805.chunk.js",
+    "main.js.map": "/static/js/main.6723f805.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bb418f2b.js",
     "runtime-main.js.map": "/static/js/runtime-main.bb418f2b.js.map",
     "static/js/2.073fed9b.chunk.js": "/static/js/2.073fed9b.chunk.js",
     "static/js/2.073fed9b.chunk.js.map": "/static/js/2.073fed9b.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.249d0ffbec0f46f0e84d71be517512bd.js": "/precache-manifest.249d0ffbec0f46f0e84d71be517512bd.js",
+    "precache-manifest.4b00586dd34035fbde60371d009f34de.js": "/precache-manifest.4b00586dd34035fbde60371d009f34de.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.3d48a5b6.chunk.css.map": "/static/css/main.3d48a5b6.chunk.css.map",
     "static/media/haiku-seeklogo.com.svg": "/static/media/haiku-seeklogo.com.2a75c61d.svg"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.bb418f2b.js",
     "static/js/2.073fed9b.chunk.js",
     "static/css/main.3d48a5b6.chunk.css",
-    "static/js/main.711efa6f.chunk.js"
+    "static/js/main.6723f805.chunk.js"
   ]
 }
