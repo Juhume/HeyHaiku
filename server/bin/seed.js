@@ -34,7 +34,8 @@ const haikus = [
     line2: "On a southern continent",
     line3: "Strange creatures I know",
     creatorId: "5d9f64fc702a28669539d99f"
-  }
+  },
+
 ];
   Haiku.deleteMany()
   .then(() => {

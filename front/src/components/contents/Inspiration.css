@@ -1,0 +1,25 @@
+.twittertext h1{
+  font-size: 50px;
+  font-family: 'EB Garamond', serif;
+  text-decoration: underline;
+  color: #768e87;
+}
+
+.twittertext h4{
+  font-family: 'EB Garamond', serif;
+  color: #768e87;
+  font-size: 30px;
+}
+
+
+.tweet {
+background-color: #d8d4bf;
+display: flex;
+justify-content: space-around;
+}
+
+.centerContent{
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+}

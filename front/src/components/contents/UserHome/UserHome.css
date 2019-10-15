@@ -1,19 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Montez&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700|Indie+Flower&display=swap');
+
 body {
-  background-color: #ebebeb;
 }
 
-.home{
+.home {
   display: flex;
+  padding: 30px;
+}
+
+.fullhome h1 {
+  font-size: 50px;
+  font-family: 'EB Garamond', serif;
+  text-decoration: underline;
+  color: #768e87;
+}
+
+.haikus h3 {
+  font-size: 30px;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.haikus h3:hover, .haikus h3:focus, .haikus h3:active {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+.haikus h4 {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  /* background: #e1e1e1; */
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.haikus h4:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #768e87;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.haikus h4:hover, .haikus h4:focus, .haikus h4:active {
+  color: white;
+}
+h4:hover:before, .haikus h4, .haikus h4:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.haikus {
+  margin: 20px;
+  width: 375px;
+  height: 250px;
+  padding: 10px;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.42);
+  box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.42);
 }
 
 
-.haikus{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 300px;
-  height: 300px;
-  border: solid 1px tomato;
-  justify-content: space-between;
-  padding:20px;
+.haikus p {
+  font-size: 28px;
+  font-family: 'Indie Flower', cursive;
+  line-height: 6.5px;
+
+  /* font-family: 'Montez', cursive; */
 }
+
+

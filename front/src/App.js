@@ -12,6 +12,9 @@ import UserHome from "./components/contents/UserHome/UserHome";
 import CreateHaiku from "./components/contents/UserHome/CreateHaiku/CreateHaiku";
 import Myprofile from "./components/contents/UserHome/MyProfile/Myprofile";
 import GenerateHaiku from "./components/contents/UserHome/GenerateHaiku/GenerateHaiku";
+import Inspiration from "./components/contents/Inspiration";
+import Info from "./components/contents/Info";
+
 
 //App es la aplicación base, que se sirve del servicio AuthService para conectar con la bbdd
 class App extends Component {
@@ -71,9 +74,12 @@ class App extends Component {
                 path="/generatehaiku"
                 render={() => <GenerateHaiku />}
               />
+              <Route exact path="/inspiration" render={() => <Inspiration />} />
               <Route exact path="/myprofile" render={() => <Myprofile />} />
               <Redirect to="/home" />
               <Route exact path="/home" render={() => <UserHome />} />
+              <Route exact path="/info" render={() => <Info />} />
+
             </header>
             {/* <UserHome /> */}
           </div>
@@ -95,15 +101,13 @@ class App extends Component {
             <div className="home">
               <div className="hometext">
                 <h1>Welcome to Hey Haiku!</h1>
-
                 <h3>
                   Create, share, enjoy it,<br></br> a new world awaits for you,
                   <br></br> Hey Haiku is here.
                 </h3>
-
                 <h5>
-                  Feeling the inspiration? Log in or sign up below to start
-                  creating your best haikus!
+                  Ready for the world of writing haikus? <br></br>
+                  The journey begins now
                 </h5>
               </div>
               <div className="login">
@@ -118,6 +122,8 @@ class App extends Component {
                     path="/login"
                     render={() => <Login getUser={this.getUser} />}
                   />
+                
+
                 </Switch>
               </div>
             </div>

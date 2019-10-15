@@ -26,11 +26,14 @@ class Navbar extends Component {
         <nav className="nav-style">
           <img src={logo} alt="" height="60"/>
           <Link to="/home" style={{ textDecoration: 'none' }}>Home</Link> <br></br>
-
-
+          
           <Link to="/createhaiku" style={{ textDecoration: 'none' }}>Create Haiku</Link> <br></br>
 
           <Link to="/generatehaiku" style={{ textDecoration: 'none' }}>Generate Haiku</Link> <br></br>
+
+          <Link to="/inspiration" style={{ textDecoration: 'none' }}>Lack of inspiration?</Link> <br></br>
+
+          <Link to="/info" style={{ textDecoration: 'none' }}>Info</Link>
         
           <Link to="/myprofile" style={{ textDecoration: 'none' }}>{this.state.loggedInUser.username}</Link> <br></br>
 
@@ -56,6 +59,8 @@ class Navbar extends Component {
                 <Link to="/signup" style={{ textDecoration: 'none' }}>Signup</Link>
 
                 <Link to="/login" style={{ textDecoration: 'none' }}>Login</Link>
+
+
 
             
           </nav>
