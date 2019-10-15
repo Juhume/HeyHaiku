@@ -3,7 +3,8 @@ import axios from 'axios';
 class HaikuService {
   constructor() {
     this.service = axios.create({
-      baseURL: `${process.env.REACT_APP_API_URL}/haikus`,
+      // baseURL: `${process.env.REACT_APP_API_URL}/haikus`,
+      baseURL: `http://localhost:3010/haikus`,
       withCredentials: true
     });
   }
