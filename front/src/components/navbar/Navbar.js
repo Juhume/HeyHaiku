@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import AuthService from "../auth/AuthService";
 import "./Navbar.css"
-import logo from './haiku-seeklogo.com.svg';
+import logo from './15712200828898277.png';
 
 class Navbar extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class Navbar extends Component {
           
           <Link to="/createhaiku" style={{ textDecoration: 'none' }}>Create Haiku</Link> <br></br>
 
-          <Link to="/generatehaiku" style={{ textDecoration: 'none' }}>Generate Haiku</Link> <br></br>
+          <Link to="/myhaikus" style={{ textDecoration: 'none' }}>My Haikus</Link> <br></br>
 
           <Link to="/inspiration" style={{ textDecoration: 'none' }}>Lack of inspiration?</Link> <br></br>
 
@@ -39,12 +39,6 @@ class Navbar extends Component {
 
           <a onClick={this.handleLogout}>Logout</a>
 
-
-
-          <div className="header">
-            {/* <img src={logo} alt="" height="100"/> */}
-            {/* <h2>Welcome {this.state.loggedInUser.username}</h2> */}
-          </div>
         </nav>
       );
     } else {
@@ -60,9 +54,6 @@ class Navbar extends Component {
 
                 <Link to="/login" style={{ textDecoration: 'none' }}>Login</Link>
 
-
-
-            
           </nav>
         </div>
       );

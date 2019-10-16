@@ -11,7 +11,7 @@ import AuthService from "./components/auth/AuthService";
 import UserHome from "./components/contents/UserHome/UserHome";
 import CreateHaiku from "./components/contents/UserHome/CreateHaiku/CreateHaiku";
 import Myprofile from "./components/contents/UserHome/MyProfile/Myprofile";
-import GenerateHaiku from "./components/contents/UserHome/GenerateHaiku/GenerateHaiku";
+import MyHaikus from "./components/contents/UserHome/MyHaikus/MyHaikus";
 import Inspiration from "./components/contents/Inspiration";
 import Info from "./components/contents/Info";
 
@@ -71,8 +71,8 @@ class App extends Component {
               <Route exact path="/createhaiku" render={() => <CreateHaiku />} />
               <Route
                 exact
-                path="/generatehaiku"
-                render={() => <GenerateHaiku />}
+                path="/myhaikus"
+                render={() => <MyHaikus user={this.state.loggedInUser} />}
               />
               <Route exact path="/inspiration" render={() => <Inspiration />} />
               <Route exact path="/myprofile" render={() => <Myprofile />} />

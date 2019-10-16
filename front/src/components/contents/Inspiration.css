@@ -11,6 +11,10 @@
   font-size: 30px;
 }
 
+.SandboxRoot.env-bp-min .timeline-Tweet-text{
+  font-size: 50px !important;
+
+}
 
 .tweet {
 background-color: #d8d4bf;

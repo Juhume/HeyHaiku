@@ -1,18 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Montez&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700|Indie+Flower&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montez&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700|Indie+Flower&display=swap");
 
-body {
-}
-
-.home {
+.home3 {
   display: flex;
+  flex-wrap: wrap;
   padding: 30px;
+  background-color: #d8d4bf;
 }
 
 .fullhome h1 {
   font-size: 50px;
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
   text-decoration: underline;
   color: #768e87;
 }
@@ -26,11 +25,13 @@ body {
   transition-duration: 0.5s;
 }
 
-.haikus h3:hover, .haikus h3:focus, .haikus h3:active {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+.haikus h3:hover,
+.haikus h3:focus,
+.haikus h3:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
 .haikus h4 {
@@ -63,10 +64,14 @@ body {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.haikus h4:hover, .haikus h4:focus, .haikus h4:active {
+.haikus h4:hover,
+.haikus h4:focus,
+.haikus h4:active {
   color: white;
 }
-h4:hover:before, .haikus h4, .haikus h4:active:before {
+h4:hover:before,
+.haikus h4,
+.haikus h4:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
@@ -74,7 +79,7 @@ h4:hover:before, .haikus h4, .haikus h4:active:before {
 .haikus {
   margin: 20px;
   width: 375px;
-  height: 250px;
+  height: 280px;
   padding: 10px;
   background-color: whitesmoke;
   -webkit-box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.42);
@@ -82,13 +87,10 @@ h4:hover:before, .haikus h4, .haikus h4:active:before {
   box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.42);
 }
 
-
 .haikus p {
   font-size: 28px;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
   line-height: 6.5px;
 
   /* font-family: 'Montez', cursive; */
 }
-
-

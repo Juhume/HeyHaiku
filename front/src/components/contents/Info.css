@@ -1,0 +1,21 @@
+.infomain h1 {
+  font-size: 50px;
+  font-family: "EB Garamond", serif;
+  text-decoration: underline;
+  color: #768e87;
+}
+
+.haikuinfo {
+  background-color: #d8d4bf;
+}
+
+.haikuinfo p {
+  background-color: #d8d4bf;
+  font-size: 40px;
+  text-align: justify;
+  font-family: "EB Garamond", serif;
+  padding-top: 50px;
+  margin-right: 300px;
+  margin-left: 300px;
+  line-height: 1.8;
+}

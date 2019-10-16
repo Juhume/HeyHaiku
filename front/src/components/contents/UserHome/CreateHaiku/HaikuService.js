@@ -15,8 +15,14 @@ class HaikuService {
   }
 
   getAll = () => {
-    console.log("hola")
+    console.log("Hey haiku, a project made with love by @juhume :)")
     return this.service.get('/all/Haikus')
+    .then(response => response.data)
+    .catch(err => console.log(err))
+  }
+
+  userHaikus = (username) =>{
+    return this.service.get(`/all/myhaikus/${username}`)
     .then(response => response.data)
     .catch(err => console.log(err))
   }

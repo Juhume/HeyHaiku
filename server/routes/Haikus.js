@@ -61,5 +61,12 @@ router.get('/all/Haikus', (req, res, next) => {
   .then(haikus => res.json({haikus}))
   .catch(err => console.log(err))
 })
+
+router.get('/all/myhaikus/:username', (req,res,next) => {
+  Haiku
+  .find({creatorId:req.params.username})
+  .then(haikus => res.status(200).json({haikus}))
+  .catch(err => console.log(err))
+})
   
   module.exports = router;
