@@ -32,7 +32,7 @@
 .login {
   display: flex;
   font-size: 30px;
-  margin-top: 180px;
+  margin-top: 310px;
   text-align: center;
   font-family: 'Vollkorn', serif;
 }
@@ -64,38 +64,42 @@ input:active {
   opacity: 0.8;
 }
 
-
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: top; 
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-.App-link {
-  color: #61dafb;
-
-}
-
 a {
-  color: white;
+  color: whitesmoke;
   cursor: pointer;
 }
 
 fieldset {
+  outline: none;
   border: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer {
+  padding: 15px;
+  font-family: 'EB Garamond', serif;
+  background-color: #768e87;
+  text-align: center;
+  font-size:22px;
+}
+
+footer a:hover{
+  -webkit-animation: zomg 0.5s infinite;
+  animation: zomg 0.7s infinite;
+}
+
+@-webkit-keyframes zomg {
+  0%, 100% { color: #7ccdea; }
+  16%      { color: #0074d9; }
+  32%      { color: #2ecc40; }
+  48%      { color: #ffdc00; }
+  64%      { color: #b10dc9; }
+  80%      { color: #ff4136; }
+}
+@keyframes zomg {
+  0%, 100% { color: #7ccdea; }
+  16%      { color: #0074d9; }
+  32%      { color: #2ecc40; }
+  48%      { color: #ffdc00; }
+  64%      { color: #b10dc9; }
+  80%      { color: #ff4136; }
 }

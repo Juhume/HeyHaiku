@@ -1,0 +1,53 @@
+
+.fullpoem {
+  font-family: "EB Garamond", serif;
+}
+
+.fullpoem h1{
+  font-size: 50px;
+  font-family: 'EB Garamond', serif;
+  text-decoration: underline;
+  color: #768e87;
+}
+
+.fullpoem h4{
+  font-family: 'EB Garamond', serif;
+  color: #768e87;
+  font-size: 30px;
+}
+
+
+.background{
+  height: auto;
+  padding:30px;
+  background-color: RGB(216, 212, 191);
+}
+
+.poem {
+  margin:30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.poem h3{
+  font-size: 40px;
+
+}
+
+.poem p{
+  background-color: whitesmoke;
+  padding: 20px;
+  margin: auto;
+  width: 500px;
+  font-size: 25px;
+  line-height: auto;
+  -webkit-box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.42);
+  box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.42);
+  border-radius: 5px;
+}
+
+.loading img{
+
+  width:64%;
+}

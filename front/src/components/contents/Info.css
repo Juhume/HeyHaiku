@@ -7,6 +7,9 @@
 
 .haikuinfo {
   background-color: #d8d4bf;
+  height: auto;
+  padding:30px;
+
 }
 
 .haikuinfo p {

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import HaikuService from "./HaikuService";
 import "./CreateHaiku.css";
+import { useAlert } from 'react-alert'
 
 export default class CreateHaiku extends Component {
   constructor() {
@@ -10,7 +11,8 @@ export default class CreateHaiku extends Component {
       line1: "",
       line2: "",
       line3: "",
-      line1check: ""
+      line1check: "",
+      isValid: 0
     };
     this.service = new HaikuService();
   }
@@ -27,7 +29,6 @@ export default class CreateHaiku extends Component {
     const line1 = this.state.line1;
     const line2 = this.state.line2;
     const line3 = this.state.line3;
-    console.log(this.checkHaiku(line1, line2, line3));
     if (this.checkHaiku(line1, line2, line3) === true) {
       //console.log("Esto no es un haiku muchacho")
 
@@ -38,8 +39,10 @@ export default class CreateHaiku extends Component {
             name: "",
             line1: "",
             line2: "",
-            line3: ""
-          });
+            line3: "",
+            isValid: 1
+
+          }, () => (console.log(this.state.isValid)));
         })
         .catch(error => {
           this.setState({
@@ -54,7 +57,8 @@ export default class CreateHaiku extends Component {
         name: name,
         line1: line1,
         line2: line2,
-        line3: line3
+        line3: line3,
+        isValid: 2
       });
     }
   };
@@ -137,7 +141,7 @@ export default class CreateHaiku extends Component {
         <div className="haikuform">
           <form onSubmit={event => this.handleFormSubmit(event)}>
             <fieldset>
-              <label>Name of your Haiku: </label> <br></br>
+              <label>Title of your Haiku: </label> <br></br>
               <input
                 type="text"
                 name="name"
@@ -181,6 +185,21 @@ export default class CreateHaiku extends Component {
             </fieldset>
 
             <input type="submit" value="Create Haiku" />
+          {this.state.isValid === 1 && 
+          <p className="succesful">Haiku created!</p>}
+
+
+
+
+
+          {this.state.isValid === 2 && 
+          <p className="notsuccesful">Oh no! Haiku not created, check the rules again please</p>}
+
+
+
+
+
+
           </form>
           <div className="warning">
             <p>
@@ -192,8 +211,8 @@ export default class CreateHaiku extends Component {
             <p>
               Here's a quick example:<br></br> 
               <i>It starts with five here<br></br>
-              and followed by seven more.<br></br>
-              The haiku is done.</i>
+              and followed by seven more<br></br>
+              The haiku is done</i>
             </p>
           </div>
         </div>

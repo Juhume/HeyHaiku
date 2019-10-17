@@ -1,11 +1,10 @@
 .home2 {
+  padding-bottom: 300px;
+  padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
-  padding: 30px;
+  justify-content: space-evenly;
   background-color: #d8d4bf;
-}
-
-.fullhome2{
 }
 
 .fullhome2 h1 {
@@ -15,13 +14,140 @@
   color: #768e87;
 }
 
-.haikus {
+.haikus2 h3 {
+  font-family: 'Bitter', serif;
+  font-size: 30px;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.haikus2 h3:hover,
+.haikus2 h3:focus,
+.haikus2 h3:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+.haikus2 h4 {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  /* background: #e1e1e1; */
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.haikus2 h4:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #768e87;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  transition: 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.haikus2 h4:hover,
+.haikus2 h4:focus,
+.haikus2 h4:active {
+  color: white;
+}
+h4:hover:before,
+.haikus2 h4,
+.haikus2 h4:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.haikus2 {
   margin: 20px;
-  width: 375px;
-  height: 280px;
+  width: 390px;
+  height: auto;
   padding: 10px;
   background-color: whitesmoke;
   -webkit-box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.42);
   -moz-box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.42);
   box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.42);
+}
+
+.haikus2:hover{
+    transform: translateY(-12px);
+    transition: 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    box-shadow: 0 12px 17px 2px rgba(0,0,0,0.14), 0 5px 22px 4px rgba(0,0,0,0.12), 0 7px 8px -4px rgba(0,0,0,0.20)
+}
+
+.haikus2 p {
+  font-size: 28px;
+  font-family: "Indie Flower", cursive;
+  line-height: 6.5px;
+
+  /* font-family: 'Montez', cursive; */
+}
+
+button {
+  border: none;
+  background: #f7ae42;
+  color: #ffffff;
+  font-weight: 100;
+  padding: 20px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.7s ease 0s;
+  margin:20px;
+}
+
+button:hover {
+  color: white ;
+  font-weight: 700;
+  letter-spacing: 3px;
+  background-color:#e84c3d;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.7s ease 0s;
+}
+
+button:hover span {
+  transition: 2.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: none;
+}
+
+button:hover:before {
+  content: "Are you sure?";
+}
+
+.container2{
+  font-family: "EB Garamond", serif;
+}
+
+.container2 h1{
+  font-size: 50px;
+  font-family: "EB Garamond", serif;
+  text-decoration: underline;
+  color: #768e87;
+}
+
+
+.container2 h3{
+  padding-top: 200px;
+  height: 100vh;
+  background-color: #d8d4bf;
+  font-size: 30px;
 }

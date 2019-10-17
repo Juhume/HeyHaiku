@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Montez&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap");
 @import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700|Indie+Flower&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+
 
 .home3 {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   padding: 30px;
   background-color: #d8d4bf;
 }
@@ -17,6 +20,7 @@
 }
 
 .haikus h3 {
+  font-family: 'Bitter', serif;
   font-size: 30px;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
@@ -63,6 +67,7 @@
   transition-duration: 0.4s;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
+  transition: 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .haikus h4:hover,
 .haikus h4:focus,
@@ -85,6 +90,12 @@ h4:hover:before,
   -webkit-box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.42);
   -moz-box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.42);
   box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.42);
+}
+
+.haikus:hover{
+    transform: translateY(-12px);
+    transition: 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    box-shadow: 0 12px 17px 2px rgba(0,0,0,0.14), 0 5px 22px 4px rgba(0,0,0,0.12), 0 7px 8px -4px rgba(0,0,0,0.20)
 }
 
 .haikus p {

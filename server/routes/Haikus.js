@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const Haiku = require('../models/Haiku');
+const axios = require('axios');
+
 
 router.route('/').get((req, res) => {
   Haiku.find()
@@ -65,6 +67,23 @@ router.get('/all/Haikus', (req, res, next) => {
 router.get('/all/myhaikus/:username', (req,res,next) => {
   Haiku
   .find({creatorId:req.params.username})
+  .then(haikus => res.status(200).json({haikus}))
+  .catch(err => console.log(err))
+})
+
+router.get("/randompoem/poem", (req, res, next) => {
+  axios.get("https://www.poemist.com/api/v1/randompoems")
+  // .then((resp) => res.status(200).json({resp}))
+  .then((resp) => { newPoem={title:resp.data[0].title , content:resp.data[0].content , name: resp.data[0].poet.name, url: resp.data[0].poet.url } 
+  res.status(200).json({newPoem})
+  })
+  .catch(error => console.log(error))
+})
+
+router.get("/deletehaiku/:id", (req, res, next) => {
+  // console.log(req.params.id)
+  Haiku
+  .findByIdAndDelete({_id: req.params.id})
   .then(haikus => res.status(200).json({haikus}))
   .catch(err => console.log(err))
 })

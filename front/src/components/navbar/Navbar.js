@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import AuthService from "../auth/AuthService";
 import "./Navbar.css"
-import logo from './15712200828898277.png';
+
 
 class Navbar extends Component {
   constructor(props) {
@@ -24,18 +24,21 @@ class Navbar extends Component {
     if (this.state.loggedInUser) {
       return (
         <nav className="nav-style">
-          <img src={logo} alt="" height="60"/>
+
+          <Link to="/home" ><img className="logo" src="https://res.cloudinary.com/dq8yw5qca/image/upload/v1571341540/15712200828898277_g7ulk7.png" alt="logo" height="60"/></Link>
+
           <Link to="/home" style={{ textDecoration: 'none' }}>Home</Link> <br></br>
           
           <Link to="/createhaiku" style={{ textDecoration: 'none' }}>Create Haiku</Link> <br></br>
 
-          <Link to="/myhaikus" style={{ textDecoration: 'none' }}>My Haikus</Link> <br></br>
-
           <Link to="/inspiration" style={{ textDecoration: 'none' }}>Lack of inspiration?</Link> <br></br>
 
-          <Link to="/info" style={{ textDecoration: 'none' }}>Info</Link>
-        
-          <Link to="/myprofile" style={{ textDecoration: 'none' }}>{this.state.loggedInUser.username}</Link> <br></br>
+          <Link to="/poems" style={{ textDecoration: 'none' }}>Random poem</Link> <br></br>
+
+          <Link to="/myhaikus" style={{ textDecoration: 'none' }}>{this.state.loggedInUser.username}'s haikus</Link> <br></br>
+
+          <Link to="/info" style={{ textDecoration: 'none' }}>About haikus</Link>
+
 
           <a onClick={this.handleLogout}>Logout</a>
 
@@ -47,7 +50,7 @@ class Navbar extends Component {
           <nav className="nav-style">
 
 
-              <img src={logo} alt="" height="60"/>
+              <img className="logo" src="https://res.cloudinary.com/dq8yw5qca/image/upload/v1571341540/15712200828898277_g7ulk7.png" alt="logo" height="60"/>
 
 
                 <Link to="/signup" style={{ textDecoration: 'none' }}>Signup</Link>

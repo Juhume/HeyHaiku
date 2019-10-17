@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
 
-// import ProjectList from './components/projects/ProjectList';
 import Navbar from "./components/navbar/Navbar";
-// import ProjectDetails from './components/projects/ProjectDetails';
 import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
 import AuthService from "./components/auth/AuthService";
@@ -14,14 +12,12 @@ import Myprofile from "./components/contents/UserHome/MyProfile/Myprofile";
 import MyHaikus from "./components/contents/UserHome/MyHaikus/MyHaikus";
 import Inspiration from "./components/contents/Inspiration";
 import Info from "./components/contents/Info";
+import Poems from "./components/contents/Poems";
 
 
-//App es la aplicación base, que se sirve del servicio AuthService para conectar con la bbdd
 class App extends Component {
-  //en el tiempo de construcción de la aplicación, creamos una instancia del authservice
   constructor(props) {
     super(props);
-    //arrancamos el estado con un valor de loggedInUser con nada (luego lo vamos a reemplazar con el valor real)
     this.state = { loggedInUser: null };
     this.service = new AuthService();
 
@@ -40,7 +36,6 @@ class App extends Component {
     });
   };
 
-  //este método vuelca la información del usuario y lo guarda en el state de app que siempre puedes revisitar
   fetchUser() {
     return this.service
       .loggedin()
@@ -57,9 +52,7 @@ class App extends Component {
   }
 
   render() {
-    //aqui hacemos rendering condicional dependiendo de si tenemos un usuario logeado o no
     if (this.state.loggedInUser) {
-      //en este caso mostramos los contenidos ya que hay usuario
       return (
         <React.Fragment>
           <div className="App">
@@ -79,14 +72,15 @@ class App extends Component {
               <Redirect to="/home" />
               <Route exact path="/home" render={() => <UserHome />} />
               <Route exact path="/info" render={() => <Info />} />
+              <Route exact path="/poems" render={() => <Poems />} />
+
 
             </header>
-            {/* <UserHome /> */}
           </div>
+          <footer>Hey Haiku, a project made with 💓 by <a target="_blank" href='https://github.com/Juhume'>@juhume</a></footer>
         </React.Fragment>
       );
     } else {
-      //si no estás logeado, mostrar opcionalmente o login o signup
       return (
         <React.Fragment>
           <Redirect to="/login" />
@@ -122,12 +116,11 @@ class App extends Component {
                     path="/login"
                     render={() => <Login getUser={this.getUser} />}
                   />
-                
-
                 </Switch>
               </div>
             </div>
           </div>
+          <footer>Hey Haiku, a project made with 💓 by <a target="_blank" href='https://github.com/Juhume'>@juhume</a></footer>
         </React.Fragment>
       );
     }

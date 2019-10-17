@@ -26,6 +26,19 @@ class HaikuService {
     .then(response => response.data)
     .catch(err => console.log(err))
   }
+
+  getPoem = () => {
+    return this.service.get("/randompoem/poem")
+    .then(response => response.data)
+    .catch(err => console.log(err))
+  }
+
+  deleteHaiku = (id) => {
+    console.log(id)
+    return this.service.get(`/deletehaiku/${id}`)
+    .then(response => response.data)
+    .catch(err => console.log(err))
+  }
 }
 
 export default HaikuService;

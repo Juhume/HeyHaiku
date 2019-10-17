@@ -1,16 +1,5 @@
 import React, { Component } from "react";
-import {
-  TwitterTimelineEmbed,
-  TwitterShareButton,
-  TwitterFollowButton,
-  TwitterHashtagButton,
-  TwitterMentionButton,
-  TwitterTweetEmbed,
-  TwitterMomentShare,
-  TwitterDMButton,
-  TwitterVideoEmbed,
-  TwitterOnAirButton
-} from "react-twitter-embed";
+import {TwitterTimelineEmbed} from "react-twitter-embed";
 import "./Inspiration.css";
 
 export default class Inspiration extends Component {
@@ -29,19 +18,8 @@ export default class Inspiration extends Component {
             <div className="selfCenter standardWidth">
               <TwitterTimelineEmbed
                 sourceType="profile"
-                screenName="myhaikupond"
-                linkColor="#768e87"
-                options={{ height: 750 }}
-                transparent	
-              />
-            </div>
-          </div>
-          <div className="centerContent">
-            <div className="selfCenter standardWidth">
-              <TwitterTimelineEmbed
-                sourceType="profile"
                 screenName="daily_haiku_"
-                options={{ height: 750 }}
+                options={{ width: 450, height: 750 }}
                 transparent	
               />
             </div>
@@ -51,7 +29,7 @@ export default class Inspiration extends Component {
               <TwitterTimelineEmbed
                 sourceType="profile"
                 screenName="heyhaikuweb"
-                options={{ height: 750 }}
+                options={{ width: 450, height: 750 }}
                 transparent	
               />
             </div>
@@ -61,7 +39,7 @@ export default class Inspiration extends Component {
               <TwitterTimelineEmbed
                 sourceType="profile"
                 screenName="doyouhaiku"
-                options={{ height: 750 }}
+                options={{ width: 450, height: 750 }}
                 transparent	
               />
             </div>
@@ -72,7 +50,7 @@ export default class Inspiration extends Component {
                 sourceType="profile"
                 screenName="accidental575"
                 linkColor="#768e87"
-                options={{ height: 750 }}
+                options={{ width: 450, height: 750 }}
                 transparent	
               />
             </div>
