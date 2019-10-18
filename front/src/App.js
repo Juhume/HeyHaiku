@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { Switch, Route, Redirect } from "react-router-dom";
 
+import { Link } from 'react-router-dom';
 import Navbar from "./components/navbar/Navbar";
 import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
@@ -13,6 +14,8 @@ import MyHaikus from "./components/contents/UserHome/MyHaikus/MyHaikus";
 import Inspiration from "./components/contents/Inspiration";
 import Info from "./components/contents/Info";
 import Poems from "./components/contents/Poems";
+// import TheHeyHaikuproject from "./components/contents/TheHeyHaikuproject"
+
 
 
 class App extends Component {
@@ -73,20 +76,27 @@ class App extends Component {
               <Route exact path="/home" render={() => <UserHome />} />
               <Route exact path="/info" render={() => <Info />} />
               <Route exact path="/poems" render={() => <Poems />} />
+              {/* <Route exact path="/theyheyhaikuproject" render={() => <TheHeyHaikuproject />} /> */}
 
 
             </header>
           </div>
-          <footer>Hey Haiku, a project made with 💓 by <a target="_blank" href='https://github.com/Juhume'>@juhume</a></footer>
+          <footer>Hey Haiku, a project made with 💓 by <a className="juhume" target="_blank" href='https://github.com/Juhume'>@juhume</a>
+           {/* <Link to="/theheyhaikuproject" className="heyhaikuinfo" >the Hey Haiku project</Link> */}
+           </footer>
         </React.Fragment>
       );
     } else {
       return (
+        
         <React.Fragment>
+
           <Redirect to="/login" />
 
           <div className="App">
+          
             <header className="App-header">
+              
               <Navbar
                 userInSession={this.state.loggedInUser}
                 logout={this.logout}
@@ -105,11 +115,13 @@ class App extends Component {
                 </h5>
               </div>
               <div className="login">
+                
                 <Switch>
                   <Route
                     exact
                     path="/signup"
                     render={() => <Signup getUser={this.getUser} />}
+                    
                   />
                   <Route
                     exact
@@ -117,11 +129,16 @@ class App extends Component {
                     render={() => <Login getUser={this.getUser} />}
                   />
                 </Switch>
+
               </div>
             </div>
           </div>
-          <footer>Hey Haiku, a project made with 💓 by <a target="_blank" href='https://github.com/Juhume'>@juhume</a></footer>
+
+          <footer>Hey Haiku, a project made with 💓 by <a className="juhume" target="_blank" href='https://github.com/Juhume'>@juhume</a> 
+          {/* <Link to="/theheyhaikuproject" className="heyhaikuinfo" >the Hey Haiku project</Link> */}
+          </footer>
         </React.Fragment>
+        
       );
     }
   }

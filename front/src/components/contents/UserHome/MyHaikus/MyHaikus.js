@@ -87,10 +87,10 @@ export default class MyHaikus extends Component {
     } else {
       return <div className="container2">
         <div>
-        <h1>This is so sad... you don't have haikus still</h1>
+        <h1>You didn't created any haiku</h1>
         </div>
         <div classname="nohaiku">
-        <h3>But don't worry, you just have to click <Link to="/createhaiku" >here</Link> </h3>
+        <h3>But don't worry, we got your back, you just have to click <br></br><br></br> <Link to="/createhaiku" className="redirect" >Here</Link> </h3>
         </div>
 
         </div>;
@@ -98,12 +98,3 @@ export default class MyHaikus extends Component {
   }
 }
 
-{
-  /* <form>
-          <input onChange={(e)=> this.changeValue(e)} type='text' placeholder='word'></input>
-          <button onClick={(e)=> this.createHaiku(e)}></button>
-        </form>
-        <div className="createdhaiku">
-
-        </div> */
-}

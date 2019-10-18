@@ -21,19 +21,44 @@
   -moz-box-shadow: -1px 0px 33px -5px rgba(0, 0, 0, 0.53);
   box-shadow: -1px 0px 33px -5px rgba(0, 0, 0, 0.53);
   border-radius: 5px;
-  height: 500px;
-  background-color: rgba(245, 245, 245);
+  height: 480px;
+  background-color: rgba(245, 245, 245, 0.876);
   padding: 30px;
+}
+
+.sendhaiku {
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid #d9edff;
+  color: #aacfce;
+  font-size: 20px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 100px;
+  padding: 0 22px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: white;
+  width: 200px;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 18px;
+}
+
+.sendhaiku:hover {
+	color:#768e87;
+  background-color: whitesmoke;
+  box-shadow: 0 2px 4px rgb(118, 142, 135, 0.45);
 }
 
 .warning {
   text-align: justify;
-  padding:10px;
+  padding: 10px;
   font-size: 22px;
   margin-left: 100px;
   background-color: rgba(236, 215, 97, 0.616);
   margin-top: 100px;
-  height:360px;
+  height: 360px;
   width: 300px;
   -webkit-box-shadow: -1px 0px 33px -5px rgba(0, 0, 0, 0.53);
   -moz-box-shadow: -1px 0px 33px -5px rgba(0, 0, 0, 0.53);
@@ -41,111 +66,141 @@
   border-radius: 5px;
 }
 
-.warning h6{
+.warning h6 {
   font-size: 22px;
 }
 
-.notsuccesful,
-.notsuccesful::after {
-  transform:scaley(0.95);
-	animation-delay: var(--animation-delay, 2s);
-	animation-iteration-count: var(--iterations, 1);
-	animation-duration: var(--duration, 800ms);
-	animation-fill-mode: both;
-	animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
-}
-
-.notsuccesful {
-	--animation-delay: var(--delay, 0);
-	--animation-duration: var(--duration, 20000ms);
-	--animation-iterations: var(--iterations, 1);
-	position: relative;
-	font-size: 25px;
-	animation-name: clip-text;
-	color: black;
-	white-space: nowrap;
-	cursor: default;
-}
-	::after {
-		content: "";
-		position: absolute;
-		z-index: 999;
-		top: 0;
-		left: 0;
-		right: 0;
-    bottom: 0;
-		background-color: #e84c3d;
-		transform: scaleX(0);
-		transform-origin: 0 50%;
-		pointer-events: none;
-		animation-name: text-revealer;
-	}
-	
-	.notsuccesful,
-	.notsuccesful::after {
-		transform:scaley(0.95);
-		animation-delay: var(--animation-delay, 2s);
-		animation-iteration-count: var(--iterations, 1);
-		animation-duration: var(--duration, 800ms);
-		animation-fill-mode: both;
-		animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
-	}
-	
-	.notsuccesful {
-		--animation-delay: var(--delay, 0);
-		--animation-duration: var(--duration, 20000ms);
-		--animation-iterations: var(--iterations, 1);
-		position: relative;
-		font-size: 25px;
-		animation-name: clip-text;
-		color: black;
-		white-space: nowrap;
-		cursor: default;
-	}
-		::after {
-			content: "";
-			position: absolute;
-			z-index: 999;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-color: #e84c3d;
-			transform: scaleX(0);
-			transform-origin: 0 50%;
-			pointer-events: none;
-			animation-name: text-revealer;
-		}
-		
-
-
 @keyframes clip-text {
-	from {
-		clip-path: inset(0 100% 0 0);
-	}
-	to {
-		clip-path: inset(0 0 0 0);
-	}
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
-
 
 @keyframes text-revealer {
-	
-	0%, 50% {
-		transform-origin: 0 50%;
-	}
-	
-	60%, 100% {
-		transform-origin: 100% 50%;		
-	}
+  0%,
+  50% {
+    transform-origin: 0 50%;
+  }
 
-	
-	60% {
-		transform: scaleX(1);
-	}
-	
-	100% {
+  60%,
+  100% {
+    transform-origin: 100% 50%;
+  }
+
+  60% {
+    transform: scaleX(1);
+  }
+
+  100% {
     transform: scaleX(0);
   }
 }
 
+.succesful {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: black;
+  display: inline-block;
+  animation: fadeIn 1.5s forwards;
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.first {
+  display: inline-block;
+  animation: firstSpan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: 1;
+  position: relative;
+}
+
+.oh {
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.second {
+  animation: secondSpan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  font-weight: 100;
+  color: #267200;
+  z-index: -1;
+  display: inline-block;
+}
+
+.second2 {
+  animation: secondSpan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  font-weight: 100;
+  color: #e84c3d;
+  z-index: -1;
+  display: inline-block;
+}
+.notsuccesful {
+  text-align: left;
+  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: black;
+  display: inline-block;
+  animation: fadeIn 1.5s forwards;
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes firstSpan {
+  0% {
+    transform: translateX(50%);
+  }
+  60% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes secondSpan {
+  0% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-0%);
+  }
+}
+
+@keyframes delayedShow {
+  to {
+    visibility: visible;
+  }
+}
+
+.third {
+  color: #f7ae42;
+  visibility: hidden;
+  animation: 4s linear 2.3s forwards delayedShow;
+}

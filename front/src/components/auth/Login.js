@@ -1,6 +1,5 @@
 // auth/Signup.js
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import AuthService from './AuthService'
 
 class Login extends Component {
@@ -54,7 +53,7 @@ class Login extends Component {
           <input type="password" name="password" placeholder='******' value={this.state.password} onChange={e => this.handleChange(e)} />
         </fieldset>
 
-        <input type="submit" value="Click here and take out your writer inside" />
+        <input type="submit" className="homebuttons" value="Click here and take out your writer inside" />
       </form>
 
       <h4>{this.state.error ? 'Incorrect user or password' : ''}</h4>

@@ -24,7 +24,17 @@ export default class Poems extends Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div className="loading"><img  alt="Poems dwarfs mining" src='https://media.giphy.com/media/YP7eWZjXYRPmSG7xOK/source.gif'></img></div>;
+     return <div className="loading">
+      <div class="loader book">
+          <figure class="page"></figure>
+          <figure class="page"></figure>
+          <figure class="page"></figure>
+      </div>
+
+        <h1>Dusting off the books from the attic</h1>
+   </div>
+     
+      // return <div className="loading"><img  alt="Poems dwarfs mining" src='https://media.giphy.com/media/YP7eWZjXYRPmSG7xOK/source.gif'></img></div>;
     } else {
       return (
         <div className="fullpoem">

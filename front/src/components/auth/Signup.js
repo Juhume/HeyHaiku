@@ -67,7 +67,7 @@ class Signup extends Component {
             <input type="password" name="password" placeholder="******" value={this.state.password} onChange={ e => this.handleChange(e)} />
           </fieldset>
           
-          <input type="submit" value="Click here and take out your writer inside" />
+          <input type="submit" className="homebuttons" value="Click here and take out your writer inside" />
         </form>
 
         <h4>{this.state.error ? 'Oups! Something went wrong!' : ''}</h4>

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import HaikuService from "./HaikuService";
 import "./CreateHaiku.css";
-import { useAlert } from 'react-alert'
 
 export default class CreateHaiku extends Component {
   constructor() {
@@ -184,16 +183,24 @@ export default class CreateHaiku extends Component {
               />
             </fieldset>
 
-            <input type="submit" value="Create Haiku" />
+            <input type="submit" className="sendhaiku" value="Create Haiku" />
+            <br></br>
           {this.state.isValid === 1 && 
-          <p className="succesful">Haiku created!</p>}
+          <p className="succesful"><span class="first">Haiku</span> 
+          <span class="oh">
+            <span class="second">created succesfully!🙌🏻</span>
+          </span></p>}
 
 
 
 
 
           {this.state.isValid === 2 && 
-          <p className="notsuccesful">Oh no! Haiku not created, check the rules again please</p>}
+          <p className="notsuccesful"><span class="first">Haiku</span> 
+          <span className="oh"> 
+            <span className="second2">not created ❌</span>
+            {/* <span className="third"><br></br>⚠️ check the rules again </span> */}
+          </span></p>}
 
 
 

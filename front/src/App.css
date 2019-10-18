@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Vollkorn&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Vollkorn&display=swap");
 
 .App {
   text-align: center;
   /* background-color: #9bbede; */
 }
 
-.home{
-  background-image: url('https://images.unsplash.com/photo-1490131784822-b4626a8ec96a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+.home {
+  background-image: url("https://images.unsplash.com/photo-1490131784822-b4626a8ec96a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
   background-repeat: no-repeat;
   background-position: center; /* Center the image */
   height: 100vh;
@@ -17,16 +17,15 @@
   background-position-y: auto;
 }
 
-.hometext{
+.hometext {
   font-size: 40px;
   text-align: center;
-  font-family: 'Vollkorn', serif;
+  font-family: "Vollkorn", serif;
   margin-top: 100px;
-
 }
 
-.hometext h5{
-  font-size:30px;
+.hometext h5 {
+  font-size: 30px;
 }
 
 .login {
@@ -34,38 +33,63 @@
   font-size: 30px;
   margin-top: 310px;
   text-align: center;
-  font-family: 'Vollkorn', serif;
+  font-family: "Vollkorn", serif;
+}
+
+.homebuttons {
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid #d9edff;
+  color: #aacfce;
+  font-size: 20px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 100px;
+  padding: 0 22px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: white;
+  width: 380px;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 18px;
+}
+
+.homebuttons:hover {
+  color: #768e87;
+  background-color: whitesmoke;
+  box-shadow: 0 2px 4px rgb(118, 142, 135, 0.45);
 }
 
 input {
-	box-shadow:inset 1px 0px 3px 0px #91b8b3;
-	background-color:#768d87;
-	border-radius:19px;
-	border:1px solid #566963;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Verdana;
-	font-size:17px;
-	font-style:italic;
-	padding:18px 47px;
-	text-decoration:none;
+  box-shadow: inset 1px 0px 3px 0px #91b8b3;
+  background-color: #768d87;
+  border-radius: 19px;
+  border: 1px solid #566963;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Verdana;
+  font-size: 17px;
+  font-style: italic;
+  padding: 18px 47px;
+  text-decoration: none;
 }
 input:hover {
-	background-color:#6c7c7c;
+  background-color: #6c7c7c;
 }
 input:active {
-	position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
 
-::placeholder { 
+::placeholder {
   color: white;
   opacity: 0.8;
 }
 
 a {
-  color: whitesmoke;
+  /* color: whitesmoke; */
   cursor: pointer;
 }
 
@@ -75,31 +99,86 @@ fieldset {
 }
 
 footer {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around; */
   padding: 15px;
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
   background-color: #768e87;
   text-align: center;
-  font-size:22px;
+  font-size: 22px;
 }
 
-footer a:hover{
+.juhume {
+  /* margin-left:30px; */
+  color: whitesmoke;
+}
+
+.juhume:hover {
   -webkit-animation: zomg 0.5s infinite;
   animation: zomg 0.7s infinite;
 }
 
 @-webkit-keyframes zomg {
-  0%, 100% { color: #7ccdea; }
-  16%      { color: #0074d9; }
-  32%      { color: #2ecc40; }
-  48%      { color: #ffdc00; }
-  64%      { color: #b10dc9; }
-  80%      { color: #ff4136; }
+  0%,
+  100% {
+    color: #7ccdea;
+  }
+  16% {
+    color: #0074d9;
+  }
+  32% {
+    color: #2ecc40;
+  }
+  48% {
+    color: #ffdc00;
+  }
+  64% {
+    color: #b10dc9;
+  }
+  80% {
+    color: #ff4136;
+  }
 }
 @keyframes zomg {
-  0%, 100% { color: #7ccdea; }
-  16%      { color: #0074d9; }
-  32%      { color: #2ecc40; }
-  48%      { color: #ffdc00; }
-  64%      { color: #b10dc9; }
-  80%      { color: #ff4136; }
+  0%,
+  100% {
+    color: #7ccdea;
+  }
+  16% {
+    color: #0074d9;
+  }
+  32% {
+    color: #2ecc40;
+  }
+  48% {
+    color: #ffdc00;
+  }
+  64% {
+    color: #b10dc9;
+  }
+  80% {
+    color: #ff4136;
+  }
+}
+
+.heyhaikuinfo {
+  float: right;
+  color:whitesmoke
+}
+
+.heyhaikuinfo:hover {
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
 }

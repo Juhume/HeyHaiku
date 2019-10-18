@@ -1,3 +1,4 @@
+
 .home2 {
   padding-bottom: 300px;
   padding-top: 30px;
@@ -76,6 +77,11 @@ h4:hover:before,
   transform: scaleX(1);
 }
 
+h4{
+  font-family: "EB Garamond", serif;
+  font-size:20px;
+}
+
 .haikus2 {
   margin: 20px;
   width: 390px;
@@ -150,4 +156,33 @@ button:hover:before {
   height: 100vh;
   background-color: #d8d4bf;
   font-size: 30px;
+}
+
+.redirect {
+  display: inline-block;
+  padding: 15px;
+  margin-right: 5px;
+  height: 50px;
+  min-width: 100px;
+  background: #348aa7;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 30px;
+  border-radius: 3px;
+  box-shadow: 0 5px 0px #348aa7;
+  border-bottom: 2px solid #30809b;
+}
+.redirect:hover {
+  background: #2e7a94;
+  box-shadow: 0 4px 1px #2e7a94;
+  border-bottom: 2px solid #2a7088;
+  transition: all 0.1s ease-in;
+}
+.redirect:active {
+  transform: translateY(4px);
+  border-bottom-width: 2px;
+  box-shadow: none;
 }
