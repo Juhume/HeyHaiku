@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-haiku: #768e87;
+  --color-haiku-dark: #566963;
+  --color-haiku-light: #91b8b3;
+  --color-haiku-accent: #9bbede;
+  --color-haiku-cream: #faf8f5;
+  --font-serif: "Vollkorn", serif;
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: var(--color-haiku-cream);
+  color: #2d3436;
+}
+
+::selection {
+  background-color: var(--color-haiku-light);
+  color: white;
+}
